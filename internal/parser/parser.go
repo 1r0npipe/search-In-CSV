@@ -1,8 +1,14 @@
 package parser
 
-import "unicode"
+import (
+	"errors"
+	"unicode"
+)
 
-var EOF = rune(0)
+var (
+	EOF = rune(0)
+	ErrScanRune = errors.New("can't read rune")
+)
 
 func isWhiteSpace(ch rune) bool {
 	return ch == ' ' || ch == '\t' || ch == '\n'
@@ -16,4 +22,10 @@ func isDigit(ch rune) bool {
 	return unicode.IsDigit(ch)
 }
 
-
+func (s *Scanner) read() rune {
+	ch, _ , err := s.r.ReadRune()
+	if err != nil {
+		return EOF
+	}
+	return ch
+}
