@@ -19,7 +19,7 @@ linters:
   disable-all: true
   enable:
   - gofmt # форматирование кода (пробелы, отступы, скобки)
-  - goimports # обновление списка imports
+  #- goimports # обновление списка imports
   - govet # общий анализ возможных багов
   - goconst # нахождение строк, которые следует вынести в константы
   - funlen # детектирование слишком крупных функций
@@ -29,9 +29,9 @@ linters:
   - exportloopref # детектирование экспорта указателя на переменную внутри цикла
   # настройки отдельных линтеров
 linters-settings:
-  goimports:
+  #goimports:
     # указываем префикс локальных импортов, они будут группироваться
-    local-prefixes: path/to/module
+    #local-prefixes: path/to/module
   govet:
     # проверка на использование переменных «в тени»
     check-shadowing: true

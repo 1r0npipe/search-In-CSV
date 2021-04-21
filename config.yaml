@@ -4,4 +4,4 @@ server:
 timeout: 10
 logFile: "/tmp/access.log"
 errorFile: "/tmp/error.log"
-defaultFile: "/home/eugene/geekbrains/search-In-CSV/example.csv"
+defaultFile: "./example.csv"
