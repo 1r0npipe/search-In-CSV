@@ -1,0 +1,7 @@
+server:
+  host: 127.0.0.1
+  port: 8081  
+timeout: 10
+logFile: "/tmp/access.log"
+errorFile: "/tmp/error.log"
+defaultFile: "./example.csv"
